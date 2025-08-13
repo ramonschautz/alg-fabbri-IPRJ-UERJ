@@ -1,6 +1,6 @@
 # Algoritmos e Estrutura de Dadoos 2025
 ## Informações
-- Professor [Ricardo Fabbri, Ph.D](http://rfabbri.github.io).
+- Professor [Ricardo Fabbri, Ph.D](http://rfabbri.github.io)
 - Datas das avaliações teóricas
     - P1: qua1Out25
     - P2: qua2Dez25
@@ -10,6 +10,7 @@
 M = 0.3*P + 0.7*T
 
 P = (P1 + P2)/2
+
 T = nota de trabalhos e tarefas
 
 ## Trabalhos
@@ -20,8 +21,10 @@ T = nota de trabalhos e tarefas
         - Nao entrega lista, mas programa na hora da aula pratica
         - Testes passando -> nota
     - Teoricos
-
+- Trabalho final da disciplina: consistem em trabalhos maiores
 - IA sera permitida em alguns trabalhos
+- Toda correção terá acompanhamento individual do professor para garantir
+  conhecimento
 
 ### Enviar para
 
@@ -31,21 +34,22 @@ subject tem que conter: [alg-iprj]
 
 ### Tarefa 0: questionario, até 17h de 14ago25
 
+Link enviado direto para seu email @grad
 
-https://docs.google.com/forms/d/e/1FAIpQLScrCpyC94soVCywGjTojU1ZuAGZtHGF9JAwKDSqYksKfen5RA/viewform?usp=sharing&ouid=111701124473528400298
 
 ## Aulas Teoricas
 
 - Exemplos em codigo fonte de videogames
 - Apenas os melhores algoritmos e as melhores implementacoes!
-    - IA nao consegue 
+    - IA nao consegue (?)
     
 ## Linguagem
-C/C++
+C/C++ com CMake
 
 ## IDE/Ambiente
-- VSCode eh padrao atualmente para codigo como IA
-- Usaremos NVim (motivacao nos slides)
+- VSCode eh padrao atualmente para explorarr codigo como IA, porém não é avançado
+- Usaremos o Vim, em especial explorando o Neovim (NVim) (motivacao nos slides).
+  A IDE mais respeitada por desenvolvedors.
 
 ### IA/LLMs
 - Uso de IA será explorado em alguns projetos
@@ -60,8 +64,5 @@ C/C++
 
 ## See also
 
-Projeto e Analise de Algoritmos - wiki
+[Projeto e Analise de Algoritmos - wiki](http://wiki.nosdigitais.teia.org.br/PAA) (em fase de upgrade)
 
-
-# TODO
-- marcar prova
