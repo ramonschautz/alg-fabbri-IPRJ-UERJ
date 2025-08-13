@@ -73,6 +73,6 @@ C/C++ com CMake
 - Programming Pearls
 
 ## See also
-
-[Projeto e Analise de Algoritmos - wiki](http://wiki.nosdigitais.teia.org.br/PAA) (em fase de upgrade)
+- Dijkstra On the foolishness of "natural language programming" https://news.ycombinator.com/item?id=43564386 
+- [Projeto e Analise de Algoritmos - wiki](http://wiki.nosdigitais.teia.org.br/PAA) (em fase de upgrade)
 
