@@ -58,7 +58,7 @@ C/C++ com CMake
 ## IDE/Ambiente
 - VSCode eh padrao atualmente para explorarr codigo como IA, porém não é avançado
 - Usaremos o Vim, em especial explorando o Neovim (NVim) (motivacao nos slides).
-  A IDE mais respeitada por desenvolvedors de acordo com o Stack Overflow
+  A IDE mais respeitada por desenvolvedores de acordo com o Stack Overflow
   Developer Survey 2025.
 
 ### IA/LLMs
