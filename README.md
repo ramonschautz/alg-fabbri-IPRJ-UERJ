@@ -28,7 +28,7 @@ T = nota de trabalhos e tarefas
 
 ### Enviar para
 
-rfabbri@iprj.uerj.br
+rfabbri@iprj...
 
 subject tem que conter: [alg-iprj]
 
