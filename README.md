@@ -32,9 +32,18 @@ rfabbri@iprj.uerj.br
 
 subject tem que conter: [alg-iprj]
 
-### Tarefa 0: questionario, até 17h de 14ago25
+### Tarefa 0: questionario e contas, até 17h de 14ago25
 
-Link enviado direto para seu email @grad
+A tarefa 0.1) consiste em responder ao questionário (enviado por email).
+
+Solicito outras tarefas:
+
+0.2) criar uma conta github até a mesma data, caso ainda não tenha, 
+
+0.3) assinatura do plano de estudante do Gemni gratuito por 1 ano, que foi eleito para algumas atividades do curso.
+
+Recomendo já instalar o gemni-cli na sua máquina pessoal, que foi o assistente
+de programação eleito/justificado em aula.
 
 
 ## Aulas Teoricas
@@ -49,7 +58,8 @@ C/C++ com CMake
 ## IDE/Ambiente
 - VSCode eh padrao atualmente para explorarr codigo como IA, porém não é avançado
 - Usaremos o Vim, em especial explorando o Neovim (NVim) (motivacao nos slides).
-  A IDE mais respeitada por desenvolvedors.
+  A IDE mais respeitada por desenvolvedors de acordo com o Stack Overflow
+  Developer Survey 2025.
 
 ### IA/LLMs
 - Uso de IA será explorado em alguns projetos
