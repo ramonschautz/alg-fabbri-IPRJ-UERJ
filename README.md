@@ -1,4 +1,4 @@
-# Algoritmos e Estrutura de Dadoos 2025
+# Algoritmos e Estrutura de Dados 2025
 ## Informações
 - Professor [Ricardo Fabbri, Ph.D](http://rfabbri.github.io)
 - Datas das avaliações teóricas
