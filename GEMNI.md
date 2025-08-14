@@ -1,6 +1,6 @@
 # About
 
-# Programming Language
+## Programming Language
 - All projects we ask in this folder are in C/C++
 
 ## C Coding Style
@@ -26,13 +26,9 @@
 - Make use of block comments /* */ where appropriate, not // all the time for multiline
 - For commenting large blocks of code use #if 0 .. #endif if /* */ is already in
   the block
+- Indentation is always in increments of 2 spaces. Never tab.
 
-### Documentation
-- The documentation should be in Latex in a doc/ subfolder
-- It should include my name, email 
-- It should also be in the CMake subfolder chain
-
-## C Coding Technique
+### C Coding Technique
 - Use the fastest, most efficient solution known
 - Use the best algorith with the best asymptoptic complexity and best constants
   known for the problem and problem size in question
@@ -44,6 +40,11 @@
       possible to C in terms of efficiency
 - if a quantity is unsigned, use 'unsigned' instead of 'int'
 
+## Documentation
+- The documentation should be in Latex in a doc/ subfolder
+- It should include my name, email 
+- It should also be in the CMake subfolder chain
+- Every fileshould have a first comment line with my name on it and date
 
 ## Tooling
 - Use Cmake with Make
@@ -58,10 +59,15 @@
 - When I type make, I expect the current folder and subfolders to make
 - When I type make only in the tests, I expect it to build only the tests
 
-## Debuggers
+### Debuggers
 - DDD (gdb backend)
 - Always compile C code with ample debug flags by default, -ggdb3 beyod just -g.
   You can hardcode that in CMakeLists.txt
+- Use fencing by default in CMakeLists.txt: add flags -fsanitize=address -fno-omit-frame-pointer
+
+### Linting
+- I may ask you "lintme" and you will lint all the codebase per the guidelines
+  in this file
 
 ## Initial setup
 When I ask you "do the initial setup"  or similar, do:
