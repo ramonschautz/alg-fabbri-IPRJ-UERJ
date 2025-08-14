@@ -185,8 +185,8 @@ SNAKESIZE=3                             # Initial Size of array aka snake
 DELAY=0.1                               # Timer delay for move function
 FIRSTROW=3                              # First row of game area
 FIRSTCOL=1                              # First col of game area
-LASTCOL=60                              # Last col of game area
-LASTROW=40                              # Last row of game area
+LASTCOL=40                              # Last col of game area
+LASTROW=20                              # Last row of game area
 AREAMAXX=$(( $LASTCOL - 1 ))            # Furthest right play area X
 AREAMINX=$(( $FIRSTCOL + 1 ))           # Furthest left play area X
 AREAMAXY=$(( $LASTROW - 1 ))            # Lowest play area Y
@@ -205,25 +205,25 @@ LASTPOSY=( $ZEROES )                    # Pad with zeroes to start with
 SCORE=0                                 # Starting score
 
 clear
-echo "
-Vi Keys:
-
- j - DOWN
- k - UP
- h - LEFT
- l - RIGHT
- x - QUIT
-
-If characters do not display properly, consider changing
-SNAKECHAR, APPLECHAR and WALLCHAR variables in script.
-Characters supported depend upon your terminal setup.
-
-Press Return to continue
-"
+# echo "
+# Vi Keys:
+# 
+#  j - DOWN
+#  k - UP
+#  h - LEFT
+#  l - RIGHT
+#  x - QUIT
+# 
+# If characters do not display properly, consider changing
+# SNAKECHAR, APPLECHAR and WALLCHAR variables in script.
+# Characters supported depend upon your terminal setup.
+# 
+# Press Return to continue
+# "
 
 stty -echo
 tput civis
-read RTN
+# read RTN
 tput setb 0
 tput bold
 clear
