@@ -7,6 +7,10 @@
 
 ## Gemni-cli!
 
+- install
+- account
+- theme
+
 ## Type things into the terminal!
 
 what is the temperature today?
@@ -35,3 +39,10 @@ Shell mkdir -p a/b/c a/b/d/e (Create a nested directory structure with paths a/b
 ## Ask it to build a celcius to farenheit converter with a test case!
 
 Build a farenheit to celcius C program with a test case.
+
+
+## Configure Vim
+  [diff]
+        tool = nvimdiff
+
+## Vim movements 

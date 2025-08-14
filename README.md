@@ -52,6 +52,15 @@ de programação eleito/justificado em aula.
 - Apenas os melhores algoritmos e as melhores implementacoes!
     - IA nao consegue (?)
     
+## Aulas Praticas
+- O objetivo das aulas praticas sera trazer o aluno para um estado de
+  proficiencia que tambem se utiliza no ambito profissional, nao apenas o
+  minimo suficiente para realizar as tarefas
+
+- Iremos usar o gemni-cli, mas tendo o claude-code como referencia de sistema
+  production-grade em diferentes niveis durante o curso
+  
+    
 ## Linguagem
 C/C++ com CMake
 
@@ -68,9 +77,9 @@ C/C++ com CMake
 - No entanto, o foco do curso será na qualificação de programação profissional sem IA.
 
 ## Livros
-
 - A melhor referencia para cada algoritmo
 - Programming Pearls
+
 
 ## See also
 - Dijkstra On the foolishness of "natural language programming" https://news.ycombinator.com/item?id=43564386 
