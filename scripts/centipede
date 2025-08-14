@@ -206,13 +206,13 @@ SCORE=0                                 # Starting score
 
 clear
 echo "
-Keys:
+Vi Keys:
 
- W - UP
- S - DOWN
- A - LEFT
- D - RIGHT
- X - QUIT
+ j - DOWN
+ k - UP
+ h - LEFT
+ l - RIGHT
+ x - QUIT
 
 If characters do not display properly, consider changing
 SNAKECHAR, APPLECHAR and WALLCHAR variables in script.

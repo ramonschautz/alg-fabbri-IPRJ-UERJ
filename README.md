@@ -46,6 +46,22 @@ Recomendo já instalar o gemni-cli na sua máquina pessoal, que foi o assistente
 de programação eleito/justificado em aula.
 
 
+### Tarefa  1
+
+#### Mini-tarefa: jogo centipede
+O jogo centiede esta em scripts/
+Pratique o jogo em casa consistentemente.
+
+Voce tera 5min em aula para mostrar que consegue atingir um score de 80
+
+#### Tarefa principal
+
+Fazer lista de exercicios e praticar por conta.
+
+Na aula pratica voce tera 30 min para programar um algoritmo similar solicitado
+pelo professor.
+
+
 ## Aulas Teoricas
 
 - Exemplos em codigo fonte de videogames
