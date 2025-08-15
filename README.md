@@ -8,9 +8,7 @@
 ## Criterio de Avaliacao
 
 M = 0.3*P + 0.7*T
-
 P = (P1 + P2)/2
-
 T = nota de trabalhos e tarefas
 
 ## Trabalhos
@@ -49,7 +47,7 @@ de programação eleito/justificado em aula.
 ### Tarefa  1
 
 #### Mini-tarefa: jogo centipede
-O jogo centiede esta em scripts/
+O jogo centipede esta em scripts/
 Pratique o jogo em casa consistentemente.
 
 Voce tera 5min em aula para mostrar que consegue atingir um score de 80

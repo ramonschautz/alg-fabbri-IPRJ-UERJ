@@ -50,7 +50,7 @@
 - Use Cmake with Make
 
 ### Testing
-- Use TDD (test-driven development) and specific code paths you have for it
+- Use TDD (test-driven development) cycle and specific code paths you have for it
     - In particular I expect to just write make test and code runs with test
       cases
 - Use a general testing library that is actually used in production code across

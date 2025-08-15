@@ -10,6 +10,8 @@
 - install
 - account
 - theme
+- /vim
+
 
 ## Type things into the terminal!
 
@@ -17,7 +19,7 @@ what is the temperature today?
 
 ```
 create a folder structure of the form:
-a/b/c and d/e inside b                    # works
+/b/c and d/e inside b                    # works
 ```
 
 output
@@ -34,6 +36,19 @@ Shell mkdir -p a/b/c a/b/d/e (Create a nested directory structure with paths a/b
 ╰────────────────────────────────────────────╯
 ```
 
+```
+cd jogo
+is selection sort or bucket sort used in this codebase
+```
+
+- context: open 1 separate gemni window per task
+
+## Clone this repo!
+
+fork http://github.com/rfabbri/alg-fabbri-IPRJ-UERJ
+
+git clone your version
+git add remote
 
 
 ## Ask it to build a celcius to farenheit converter with a test case!
@@ -42,7 +57,21 @@ Build a farenheit to celcius C program with a test case.
 
 
 ## Configure Vim
+```
   [diff]
         tool = nvimdiff
+        
+```        
 
-## Vim movements 
+## Vim movements - centipede 
+
+## Ask it to write a function to sort vectors
+- The vectors of unsiged char elements, but can be small or up to 1MB in size.
+- The tests must include a benchmark of runtime
+- Run and see the coode
+- Now write your own and test
+- Verify that corner cases are tested, if not add them
+
+## References
+- basic gemni-cli https://www.youtube.com/watch?v=YAy7kd5Nqm0&t=471s if you
+  missed the lecture
