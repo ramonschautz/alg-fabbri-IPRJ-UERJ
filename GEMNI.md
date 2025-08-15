@@ -65,9 +65,15 @@
   You can hardcode that in CMakeLists.txt
 - Use fencing by default in CMakeLists.txt: add flags -fsanitize=address -fno-omit-frame-pointer
 
-### Linting
+### Linting: lowlevel and highlevel
 - I may ask you "lintme" and you will lint all the codebase per the guidelines
   in this file
+- IMPORTANT: rate the algorithms themselves, stating optimizations such as
+  inefficient use of memory, possibility of efficient in-place version, and flag
+  high computational complexity
+- Suggest corner cases that have not been tested such as: empty or one-size
+  input for a function that accepts a vector, integer overflow, etc.
+- Output a grade from 0-10 and justify
 
 ## Initial setup
 When I ask you "do the initial setup"  or similar, do:

@@ -54,9 +54,17 @@ Pratique o jogo em casa consistentemente.
 
 Voce tera 5min em aula para mostrar que consegue atingir um score de 80
 
+#### Mini-tarefa: vimtutor
+Rode vimtutor e faca todas as atividades. Em aula havera perguntas.
+
 #### Tarefa principal
 
 Fazer lista de exercicios e praticar por conta.
+Lista de exercicios (ainda incompleta, explicada em aula)
+- Programar e testar a operacao merge de dois vetores ordenados sem IA
+- Programar e testar a operacao do quicksort: dado um elemento x, particionar um
+  vetor em elementos menores que x, x, seguidos dos maiores que x.
+- Repetir para listas encadeadas
 
 Na aula pratica voce tera 30 min para programar um algoritmo similar solicitado
 pelo professor.
