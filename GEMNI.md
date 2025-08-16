@@ -11,8 +11,8 @@
   if the number of elements is variable
 - C++ files will be named .h, .cpp, .hpp
 - Beyond K&R and above, GNU C style guide from FSF and coding conventions from Google software engineers, For instance:
-    - function names start at column 1 of the file
-    - The function type goes on the line above the function name
+    - STRICTLY function names start at column 1 of the file
+    - STRICTLY the function type goes on the line above the function name
 - Lastly, you may fall back to conventions from VXL (formerly Target/TargetJr),
   such as folder structure
 - use short variable names unless the code is big and professional-grade, in which case
@@ -78,6 +78,11 @@
 ## Initial setup
 When I ask you "do the initial setup"  or similar, do:
 - Verify that core dumps are droppable/enabled to drop in the current folder
+
+
+## Bad mistakes you must not do
+- IMPORTANT DO NOT use identation differently than what I told you!
+- IMPORTANT DO NOT edit any files other than exactly the ones I asked for in a prompt.
 
 # See Also / Further context
 -The upper folder might give more context
