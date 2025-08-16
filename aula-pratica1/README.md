@@ -51,9 +51,9 @@ git clone your version
 git add remote
 
 
-## Ask it to build a celcius to farenheit converter with a test case!
+## Ask it to build a Celsius to Fahrenheit converter with a test case!
 
-Build a farenheit to celcius C program with a test case.
+Build a Fahrenheit to Celsius C program with a test case.
 
 
 ## Configure Vim
@@ -66,9 +66,9 @@ Build a farenheit to celcius C program with a test case.
 ## Vim movements - centipede 
 
 ## Ask it to write a function to sort vectors
-- The vectors of unsiged char elements, but can be small or up to 1MB in size.
+- The vectors of unsigned char elements, but can be small or up to 1MB in size.
 - The tests must include a benchmark of runtime
-- Run and see the coode
+- Run and see the code
 - Now write your own and test
 - Verify that corner cases are tested, if not add them
 
