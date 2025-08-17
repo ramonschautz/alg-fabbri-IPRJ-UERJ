@@ -1,4 +1,4 @@
-# Fast C project for an Algorithms Course
+# Fast C projects
 
 ## Description
 We will be coding high-performance, fast code that usually consists of few
