@@ -5,7 +5,7 @@
 
 ## C Coding Style
 - Follow K&R style closely, the one in ANSI C programming language
-- Keep it ANSI-C: Avoid more recent C-constructs unless necessary or clearly
+- IMPORTANT Keep it ANSI-C: Avoid more recent C-constructs unless necessary or clearly
   better, in which case you should point out a more recent feature is being used
 - Do not use arrays with a variable number of elements. Use the classic malloc
   if the number of elements is variable
@@ -38,6 +38,10 @@
 - C++, templates and STL-specific code may be used only sparingly
     - When using anything like classes, just use struct and stay as close as
       possible to C in terms of efficiency
+    - IMPORTANT Use C-style arrays, NEVER vector unless just prototyping or experimenting
+    - Any C++ technnique, if used, must also be C++17 or earlier. Later C++
+      technique should be discouraged since this project is efficiency and pure
+      C-oriented.
 - if a quantity is unsigned, use 'unsigned' instead of 'int'
 
 ## Documentation
