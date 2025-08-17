@@ -1,4 +1,12 @@
-# About
+# Fast C project for an Algorithms Course
+
+## Description
+We will be coding high-performance, fast code that usually consists of few
+files. This is like programming a small module in a big system,
+where the small module must be highly efficient and may be called millions of
+times per second inside a bigger project such as videogames, video processing,
+etc. The downstream application we target is real-time. The generated assembly must be
+easy to match to the sourcecode by a human.
 
 ## Programming Language
 - All projects we ask in this folder are in C/C++
@@ -26,7 +34,12 @@
 - Make use of block comments /* */ where appropriate, not // all the time for multi-line
 - For commenting large blocks of code use #if 0 .. #endif if /* */ is already in
   the block
-- Indentation is always in increments of 2 spaces. Never tab.
+- IMPORTANT Indentation is always in increments of 2 spaces. Never tab.
+- names should be lowercase and using underscores, except for filenames that
+  should use dash - rather than underscore since it is faster to type
+- NEVER use spaces in filenames
+- variables with local scope (local to a block) should only be used if performance is not at all
+  sacrificed
 
 ### C Coding Technique
 - Use the fastest, most efficient solution known
@@ -43,6 +56,10 @@
       technique should be discouraged since this project is efficiency and pure
       C-oriented.
 - if a quantity is unsigned, use 'unsigned' instead of 'int'
+- An example of high-performance, fast C code with C++ templates and minimal C++
+  relevant to this project can be found at https://github.com/rfabbri/minus at
+  minus/cmd/minus-chicago.cxx and other files in that MINUS project, although we
+  will not be using templates extensively in the present project.
 
 ## Documentation
 - The documentation should be in Latex in a doc/ subfolder
@@ -63,6 +80,12 @@
 - When I type make, I expect the current folder and subfolders to make
 - When I type make only in the tests, I expect it to build only the tests
 
+## Specific Component: `scripts/centipede`
+- always test this component when a user types make test
+- the test here is just to run the script and see if the shell parses it
+- it is an interactive text program you can test by using ijkh keys at random,
+until the program exists.
+
 ### Debuggers
 - DDD (gdb backend)
 - Always compile C code with ample debug flags by default, -ggdb3 beyond just -g.
@@ -82,6 +105,7 @@
 ## Initial setup
 When I ask you "do the initial setup"  or similar, do:
 - Verify that core dumps are droppable/enabled to drop in the current folder
+
 
 
 ## Bad mistakes you must not do
