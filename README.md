@@ -76,7 +76,6 @@ Lista de exercicios (explicada em aula)
   sao um conjunto de numeros inteiros positivos separados por espaco, e cuja
   saida sera o vetor ordenado no stdout. O nome exato dos executaveis sao
   'merge-ordenado' e 'partition'. 
-- Sao esses executaveis que serao testados
 
 Na aula prática você tera 30 min para programar um algoritmo similar solicitado
 pelo professor.
