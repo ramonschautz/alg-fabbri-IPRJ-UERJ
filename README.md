@@ -58,15 +58,28 @@ Rode vimtutor e faca todas as atividades. Em aula havera perguntas.
 #### Tarefa principal
 
 Fazer lista de exercicios e praticar por conta.
-Lista de exercicios (ainda incompleta, explicada em aula)
-- Programar e testar a operacao merge de dois vetores ordenados sem IA
-- Programar e testar a operacao do quicksort: dado um elemento x, particionar um
-  vetor em elementos menores que x, x, seguidos dos maiores que x.
+Lista de exercicios (explicada em aula)
+- Programar e testar a operacao merge_ordenado de dois vetores ordenados sem IA
+    - Entrada: dois vetores ordenados v e w
+    - Saída: um vetor ordenado vw contendo os elementos de v e w
+- Programar e testar a operacao básica partition do quicksort: dado um elemento x de um
+  vetor v, particionar o vetor v em elementos menores que x, x, seguidos dos
+  maiores que x.
+    - Entrada: um vetor v, e um índice ix  (de um elemento x tq v[ix] == x)
+    - Saída: v  da seguinte forma [ elementos < x | x | elementos > x ]
 - Repetir para listas encadeadas
+- Tipo de dado: int
+- IMPORTANTE: Seguir recomendacoes do GEMINI.md sobre boas praticas de código e
+  testes. Em especial, usar arrays em C [] e nao STL vector, pois se trata de
+  codigo de alta performance.
+- Casa tarefa acima devera ter um comando correspondente cuja entrada no stdin
+  sao um conjunto de numeros inteiros positivos separados por espaco, e cuja
+  saida sera o vetor ordenado no stdout. O nome exato dos executaveis sao
+  'merge-ordenado' e 'partition'. 
+- Sao esses executaveis que serao testados
 
-Na aula pratica voce tera 30 min para programar um algoritmo similar solicitado
+Na aula prática você tera 30 min para programar um algoritmo similar solicitado
 pelo professor.
-
 
 ## Aulas Teoricas
 
