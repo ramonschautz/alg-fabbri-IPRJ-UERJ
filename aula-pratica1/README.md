@@ -63,14 +63,9 @@ Build a Fahrenheit to Celsius C program with a test case.
         
 ```        
 
-## Vim movements - centipede 
-
-## Ask it to write a function to sort vectors
-- The vectors of unsigned char elements, but can be small or up to 1MB in size.
-- The tests must include a benchmark of runtime
-- Run and see the code
-- Now write your own and test
-- Verify that corner cases are tested, if not add them
+## Vim movements - centipede intro
+- scripts/
+- mais info em ../README.md
 
 ## References
 - basic gemni-cli https://www.youtube.com/watch?v=YAy7kd5Nqm0&t=471s if you

@@ -59,15 +59,16 @@ Rode vimtutor e faca todas as atividades. Em aula havera perguntas.
 
 Fazer lista de exercicios e praticar por conta.
 Lista de exercicios (explicada em aula)
-- Programar e testar a operacao merge_ordenado de dois vetores ordenados sem IA
+1) Programar e testar a operacao merge_ordenado de dois vetores ordenados sem IA
     - Entrada: dois vetores ordenados v e w
     - Saída: um vetor ordenado vw contendo os elementos de v e w
-- Programar e testar a operacao básica partition do quicksort: dado um elemento x de um
+2) Programar e testar a operacao básica partition do quicksort: dado um elemento x de um
   vetor v, particionar o vetor v em elementos menores que x, x, seguidos dos
   maiores que x.
     - Entrada: um vetor v, e um índice ix  (de um elemento x tq v[ix] == x)
     - Saída: v  da seguinte forma [ elementos < x | x | elementos > x ]
-- Repetir para listas encadeadas
+  Nao utilizar nenhum vetor auxiliar.
+3) Repetir para listas encadeadas
 - Tipo de dado: int
 - IMPORTANTE: Seguir recomendacoes do GEMINI.md sobre boas praticas de código e
   testes. Em especial, usar arrays em C [] e nao STL vector, pois se trata de
@@ -110,10 +111,15 @@ C/C++ com CMake
 - Video sobre Gemni-CLI https://www.youtube.com/watch?v=KrnyAJyjVG4
 - No entanto, o foco do curso será na qualificação de programação profissional sem IA.
 
+
 ## Livros
 - A melhor referencia para cada algoritmo
 - Programming Pearls
 
+## Bonus Topcoder
+- O aluno que comprovar participação em competições de programação do Topcoder
+  (ou outras) poderá ter bonus de nota atribuido pelo professor. As atividades
+  devem ser restritas à programação algoritmica em si, e não sobre design de software.
 
 ## See also
 - Dijkstra On the foolishness of "natural language programming" https://news.ycombinator.com/item?id=43564386 
