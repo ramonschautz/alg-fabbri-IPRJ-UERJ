@@ -16,7 +16,8 @@ easy to match to the sourcecode by a human.
 - IMPORTANT Keep it ANSI-C: Avoid more recent C-constructs unless necessary or clearly
   better, in which case you should point out a more recent feature is being used
 - Do not use arrays with a variable number of elements. Use the classic malloc
-  if the number of elements is variable
+  if the number of elements is variable, BUT IMPORTANT: stick to static arrays
+  with static counts unless variable elements are strictly necessary
 - C++ files will be named .h, .cpp, .hpp
 - Beyond K&R and above, GNU C style guide from FSF and coding conventions from Google software engineers, For instance:
     - STRICTLY function names start at column 1 of the file
@@ -40,6 +41,11 @@ easy to match to the sourcecode by a human.
 - NEVER use spaces in filenames
 - variables with local scope (local to a block) should only be used if performance is not at all
   sacrificed
+- Do not use braces on one-liner if-else statements, while loops and similar
+  constructs such as while if they do not require braces. But make extra effort
+  to see if this really will not instroduce a bug.
+- The style is high-performance pure C but only with touches of C++ when needed. The files are
+  .cpp not .c
 
 ### C Coding Technique
 - Use the fastest, most efficient solution known
@@ -60,6 +66,15 @@ easy to match to the sourcecode by a human.
   relevant to this project can be found at https://github.com/rfabbri/minus at
   minus/cmd/minus-chicago.cxx and other files in that MINUS project, although we
   will not be using templates extensively in the present project.
+  
+#### Commands
+- Commandline executables will by default have -cmd suffix on the name. 
+- It must work with just stdin/stdout, where stdin it reads a list of
+  numbers separated by spaces or newlines, and then it output to sdout, with any
+  error handling that is suitable to the user done in stderr. 
+- Be strictly UNIX style here with I/O, where *no news is good news*.
+- No funky banners, just I/O, unless you do that on sderr. Keep stdout/stdin
+  clean and efficient, as if doing interprocess communication.
 
 ## Documentation
 - The documentation should be in Latex in a doc/ subfolder

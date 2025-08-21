@@ -95,9 +95,13 @@ pelo professor.
 - Iremos usar o gemni-cli, mas tendo o claude-code como referencia de sistema
   production-grade em diferentes niveis durante o curso
   
+
     
 ## Linguagem
 C/C++ com CMake
+### Revisao de C, ponteiros, etc.
+https://youtu.be/Gru0DnXWr0g
+https://youtu.be/k0KfKildD-U
 
 ## IDE/Ambiente
 - VSCode eh padrao atualmente para explorarr codigo como IA, porém não é avançado
