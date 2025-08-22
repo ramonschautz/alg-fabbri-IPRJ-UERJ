@@ -163,8 +163,7 @@ git push my main
 Ao fazer esse push, o github iniciara uma action automatica de benchmark. Na aba
 Action voce vera graficos de performance do seu algoritmo.
 
-
-##### Mini-tare: refazer o sorted_merge_3way
+##### Mini-tarefa: refazer o sorted_merge_3way
 - Refazer o `sorted_merge_3way` a Tarefa 1 em casa, ate que o make test passe
 - Fazer commit 
 - Fazer git push no seu fork conforme acima
@@ -174,6 +173,14 @@ benchmark `make eval`, voce ganhara um bonus de nota no valor de uma tarefa segu
 
 **Bonus 2**: Caso seu algoritmo seja claramente mais rapido que o gabarito,
 voce ganhara um bonus de nota no valor de 1 questao da prova p1.
+
+##### Tarefa principal
+1.1) Lista de exercicio de ponteiros.
+1.2) Em casa, programar exercicios com lista encadeada com int: inserir no, remover no. 
+Na aula prática você tera 30 min para programar um algoritmo similar solicitado
+pelo professor, onde a lista encadeada pode armazenar um tipo de dado mais
+complexo que int. Realize treinos programando exercicio de livros ou internet
+sobre lista encadeada. Pode usar IA na avaliacao.
 
 ### Tarefa 3 para qui29ago25 + 7
 **ATENCAO:** Tarefa 3 ainda sendo atualizada
