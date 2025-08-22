@@ -142,7 +142,13 @@ pelo professor.
   (ou outras) poderá ter bonus de nota atribuido pelo professor. As atividades
   devem ser restritas à programação algoritmica em si, e não sobre design de software.
 
+## TODO
+- abrir ticket de suporte IPRJ (alunos tambem devem)
+    - wifi uerj1 no lab 309
+    - gemini-cli node version
+    - upgrade gemini-cli
+    - demora terminal pra startar
+
 ## See also
 - Dijkstra On the foolishness of "natural language programming" https://news.ycombinator.com/item?id=43564386 
 - [Projeto e Analise de Algoritmos - wiki](http://wiki.nosdigitais.teia.org.br/PAA) (em fase de upgrade)
-
