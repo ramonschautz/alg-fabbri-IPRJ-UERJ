@@ -213,9 +213,6 @@ Serao feitas perguntas em aula
 ## TODO
 - abrir ticket de suporte IPRJ (alunos tambem devem)
     - wifi uerj1 no lab 309 lenta
-    - gemini-cli node version
-    - upgrade gemini-cli
-    - demora terminal pra startar
 
 ## See also
 - Dijkstra On the foolishness of "natural language programming" https://news.ycombinator.com/item?id=43564386 
