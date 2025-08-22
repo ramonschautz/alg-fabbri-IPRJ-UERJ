@@ -26,7 +26,7 @@ enable_testing()
 add_subdirectory(hw1)
 
 # Custom target to run benchmarks
-add_custom_target(benchmark
+add_custom_target(eval
   COMMAND bm-jl-cmd
   DEPENDS bm-jl-cmd
   COMMENT "Running junta_listas benchmark"
