@@ -143,7 +143,7 @@ pelo professor.
 **ATENCAO:** Tarefa 2 ainda sendo atualizada
 
 #### Mini-tarefa: ler sobre git
-Ler capitulos 1 e 2 do livro Pro Git https://git-scm.com (Getting Started e
+Ler capitulo 1 e 2 do livro Pro Git https://git-scm.com (Getting Started e
 Git Basics).
 Serao feitas perguntas em aula
 
@@ -169,11 +169,15 @@ git push my main
 ##### Benchmark no fork
 Ao fazer esse push, o github iniciara uma action automatica de benchmark. Na aba
 Action voce vera graficos de performance do seu algoritmo.
+Se visualizar no repositorio do professor, um grafico de todos os alunos sera
+mostrado.
 
 ##### Mini-tarefa: refazer o sorted_merge_3way
-- Refazer o `sorted_merge_3way` a Tarefa 1 em casa, ate que o make test passe
+- Refazer o `sorted_merge_3way` da Tarefa 1 em casa, ate que o make test passe
 - Fazer commit 
 - Fazer git push no seu fork conforme acima
+- novos testes serao inseridos e o seu programa precisa passar os testes para
+se obter ponto nesta tarefa
 
 **Bonus 1**: Caso seu algoritmo seja entre os 5 mais rapidos da sala no
 benchmark `make eval`, voce ganhara um bonus de nota no valor de uma tarefa seguinte
@@ -187,7 +191,7 @@ voce ganhara um bonus de nota no valor de 1 questao da prova p1.
 Na aula prática você tera 30 min para programar um algoritmo similar solicitado
 pelo professor, onde a lista encadeada pode armazenar um tipo de dado mais
 complexo que int. Realize treinos programando exercicio de livros ou internet
-sobre lista encadeada. Pode usar IA na avaliacao.
+sobre lista encadeada. *Pode usar IA nesta avaliacao especificamente.*
 
 ### Tarefa 3 para qui29ago25 + 7
 **ATENCAO:** Tarefa 3 ainda sendo atualizada
@@ -208,7 +212,7 @@ Serao feitas perguntas em aula
 
 ## TODO
 - abrir ticket de suporte IPRJ (alunos tambem devem)
-    - wifi uerj1 no lab 309
+    - wifi uerj1 no lab 309 lenta
     - gemini-cli node version
     - upgrade gemini-cli
     - demora terminal pra startar
