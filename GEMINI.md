@@ -8,6 +8,9 @@ times per second inside a bigger project such as videogames, video processing,
 etc. The downstream application we target is real-time. The generated assembly must be
 easy to match to the sourcecode by a human.
 
+## Running tests with gooogle test
+make test
+
 ## Programming Language
 - All projects we ask in this folder are in C/C++
 
