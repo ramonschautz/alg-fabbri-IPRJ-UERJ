@@ -11,6 +11,43 @@ M = 0.3*P + 0.7*T
 P = (P1 + P2)/2
 T = nota de trabalhos e tarefas
 
+## Aulas Teoricas
+- Exemplos em codigo fonte de videogames e software voltado para bolsa Google
+  Summer of Code
+- Apenas os melhores algoritmos e as melhores implementacoes!
+    - Até onde a IA consegue ajudar em algoritmos de alta eficiencia e altamente
+      precisos, usando técnicas especializadas e lógica elaborada?
+    
+## Aulas Praticas
+- O objetivo das aulas praticas sera trazer o aluno para um estado de
+  proficiencia que tambem se utiliza no ambito profissional, nao apenas o
+  minimo suficiente para realizar as tarefas
+
+- IA: Iremos usar o gemni-cli, mas tendo o claude-code como referencia de sistema
+  production-grade em diferentes niveis durante o curso
+  
+## Linguagem
+C/C++ com CMake
+
+### Revisao de C, ponteiros, etc.
+C/C++ Fabbri Parte 1 https://youtu.be/Gru0DnXWr0g
+
+C/C++ Fabbri Parte 2 https://youtu.be/k0KfKildD-U
+
+## IDE/Ambiente
+- VSCode eh padrao atualmente para explorar codigo como IA, porém não é avançado
+- Usaremos o Vim, em especial explorando o Neovim (NVim) (motivacao nos slides).
+  A IDE mais respeitada por desenvolvedores de acordo com o Stack Overflow
+  Developer Survey 2025.
+- Na prática usam-se ambos.
+
+### IA/LLMs
+- Uso de IA será explorado em alguns projetos
+- Na primeira aula foi adotado o Gemni e o Gemni-CLI (13ago25)
+- Video sobre Gemni-CLI https://www.youtube.com/watch?v=KrnyAJyjVG4
+- No entanto, o foco do curso será na qualificação de programação profissional e base
+teorica sem IA.
+
 ## Trabalhos
 
 - Semanais
@@ -19,16 +56,31 @@ T = nota de trabalhos e tarefas
         - Nao entrega lista, mas programa na hora da aula pratica
         - Testes passando -> nota
     - Teoricos
-- Trabalho final da disciplina: consistem em trabalhos maiores
+- Trabalho final da disciplina: consiste em trabalhos maiores
 - IA sera permitida em alguns trabalhos
 - Toda correção terá acompanhamento individual do professor para garantir
   conhecimento
 
-### Enviar para
+### Envio
+
+Os trabalhos que forem para serem entregues diretamente ao professor devem ser 
+enviados para:
 
 rfabbri@iprj...
 
-subject tem que conter: [alg-iprj]
+ATENCAO: subject tem que conter: [alg-iprj]
+
+Porem a maioria das atividades valendo nota sera semanal e avaliada diretamente
+em sala de aula.
+
+### Detalhes, Data de Entrega, etc
+
+A informação de qual tarefa foi passada em que dia pode ser encontrada na pasta
+aulas/, a aula correspondente (a de maior numero). No entanto, é
+responsabilidade do aluno comparecer às aulas e ficar atento aos e-mails ou se
+inteirar com os colegas que compareceram. Chegar a uma aula sem ter se inteirado
+da aula anterior quase sempre irá incorrer na falta de compreensão e perda de
+nota em atividades.
 
 ### Tarefa 0: questionario e contas, até 17h de 14ago25
 
@@ -43,8 +95,7 @@ Solicito outras tarefas:
 Recomendo já instalar o gemni-cli na sua máquina pessoal, que foi o assistente
 de programação eleito/justificado em aula.
 
-
-### Tarefa  1
+### Tarefa  1 
 
 #### Mini-tarefa: jogo centipede
 O jogo centipede esta em scripts/
@@ -53,7 +104,7 @@ Pratique o jogo em casa consistentemente.
 Voce tera 5min em aula para mostrar que consegue atingir um score de 80
 
 #### Mini-tarefa: vimtutor
-Rode vimtutor e faca todas as atividades. Em aula havera perguntas.
+Rode vimtutor no terminal e faca todas as atividades. Em aula havera perguntas.
 
 #### Tarefa principal
 
@@ -81,41 +132,7 @@ Lista de exercicios (explicada em aula)
 Na aula prática você tera 30 min para programar um algoritmo similar solicitado
 pelo professor.
 
-## Aulas Teoricas
-
-- Exemplos em codigo fonte de videogames
-- Apenas os melhores algoritmos e as melhores implementacoes!
-    - IA nao consegue (?)
-    
-## Aulas Praticas
-- O objetivo das aulas praticas sera trazer o aluno para um estado de
-  proficiencia que tambem se utiliza no ambito profissional, nao apenas o
-  minimo suficiente para realizar as tarefas
-
-- Iremos usar o gemni-cli, mas tendo o claude-code como referencia de sistema
-  production-grade em diferentes niveis durante o curso
-  
-
-    
-## Linguagem
-C/C++ com CMake
-### Revisao de C, ponteiros, etc.
-https://youtu.be/Gru0DnXWr0g
-https://youtu.be/k0KfKildD-U
-
-## IDE/Ambiente
-- VSCode eh padrao atualmente para explorarr codigo como IA, porém não é avançado
-- Usaremos o Vim, em especial explorando o Neovim (NVim) (motivacao nos slides).
-  A IDE mais respeitada por desenvolvedores de acordo com o Stack Overflow
-  Developer Survey 2025.
-
-### IA/LLMs
-- Uso de IA será explorado em alguns projetos
-- Na primeira aula foi adotado o Gemni e o Gemni-CLI (13ago25)
-- Video sobre Gemni-CLI https://www.youtube.com/watch?v=KrnyAJyjVG4
-- No entanto, o foco do curso será na qualificação de programação profissional sem IA.
-
-
+### Tarefa 2
 ## Livros
 - A melhor referencia para cada algoritmo
 - Programming Pearls
