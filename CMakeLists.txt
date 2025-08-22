@@ -17,9 +17,3 @@ enable_testing()
 
 add_subdirectory(alg)
 
-# Custom target to run benchmarks
-add_custom_target(eval
-  COMMAND bm-sorted_merge_3way-cmd
-  DEPENDS bm-sorted_merge_3way-cmd
-  COMMENT "Running junta_listas benchmark"
-)
