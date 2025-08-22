@@ -15,11 +15,11 @@ add_subdirectory(third_party)
 
 enable_testing()
 
-add_subdirectory(hw1)
+add_subdirectory(alg)
 
 # Custom target to run benchmarks
 add_custom_target(eval
-  COMMAND bm-jl-cmd
-  DEPENDS bm-jl-cmd
+  COMMAND bm-sorted_merge_3way-cmd
+  DEPENDS bm-sorted_merge_3way-cmd
   COMMENT "Running junta_listas benchmark"
 )
