@@ -132,7 +132,57 @@ Lista de exercicios (explicada em aula)
 Na aula prática você tera 30 min para programar um algoritmo similar solicitado
 pelo professor.
 
-### Tarefa 2
+### Tarefa 2 para qui29ago25
+**ATENCAO:** Tarefa 2 ainda sendo atualizada
+
+#### Mini-tarefa: ler sobre git
+Ler capitulos 1 e 2 do livro Pro Git https://git-scm.com (Getting Started e
+Git Basics).
+Serao feitas perguntas em aula
+
+#### Mini-tarefa: finalizar o fork do repositorio da disciplina
+Vamos dar um nome "my" para seu remote.
+
+github --> entra no repositorio da disciplina --> fork (botao canto superior direito)
+
+```
+git remote add my URL
+```
+Onde URL eh a url do seu repositorio forked do github (botao verde)
+```
+git fetch my
+```
+
+Agora vc consegue adicionar sua solucao com git add e git commit, 
+depois
+```
+git push my main
+```
+
+##### Benchmark no fork
+Ao fazer esse push, o github iniciara uma action automatica de benchmark. Na aba
+Action voce vera graficos de performance do seu algoritmo.
+
+
+##### Mini-tare: refazer o sorted_merge_3way
+- Refazer o `sorted_merge_3way` a Tarefa 1 em casa, ate que o make test passe
+- Fazer commit 
+- Fazer git push no seu fork conforme acima
+
+**Bonus 1**: Caso seu algoritmo seja entre os 5 mais rapidos da sala no
+benchmark `make eval`, voce ganhara um bonus de nota no valor de uma tarefa seguinte
+
+**Bonus 2**: Caso seu algoritmo seja claramente mais rapido que o gabarito,
+voce ganhara um bonus de nota no valor de 1 questao da prova p1.
+
+### Tarefa 3 para qui29ago25 + 7
+**ATENCAO:** Tarefa 3 ainda sendo atualizada
+
+#### Mini-tarefa: ler sobre git branching
+Ler capitulo 3 do livro Pro Git https://git-scm.com (Getting Started e
+Git Basics).
+Serao feitas perguntas em aula
+
 ## Livros
 - A melhor referencia para cada algoritmo
 - Programming Pearls
