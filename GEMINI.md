@@ -40,9 +40,30 @@ make
 ### Running tests with gooogle test
 make test
 
+#### Test files
+You can examine what files the test runs with pass/fail
+by searching inside folders called `tests`, for instance:
+
+```
+find . -name 'tests'          # will list all tests
+```
+
 ### Running timing benchmark with google benchmark
 make eval
 
+## Folder structure
+    *aulas/* notas de aula: previsao do que sera cada aula pratica, e um diario
+                            do que foi coberto em aula
+    *config/* arquivos de configuracao do shell, IA/LLM, uteis ao aluno.
+
+    *alg/*
+    └── merge
+        ├── sorted_merge_3way.cpp : implementation of an algorithm(s)
+        ├── sorted_merge_3way.h   : header / API interface
+        ├── cmd/                  : commandline CLI for the algorithm(s)
+        ├── benchmark             : folder with command to benchmark the algorithm(s)
+        └── tests                 : folder with command to test the algorithm(s)
+    
 #### Benchmark statistics plots
 If you want to see plots for your results,
 after you push to your fork, go to Github,
