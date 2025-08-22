@@ -41,11 +41,14 @@ easy to match to the sourcecode by a human.
 - NEVER use spaces in filenames
 - variables with local scope (local to a block) should only be used if performance is not at all
   sacrificed
-- Do not use braces on one-liner if-else statements, while loops and similar
+- *Do not* use braces on one-liner if-else statements, while loops, for and similar
   constructs such as while if they do not require braces. But make extra effort
   to see if this really will not instroduce a bug.
 - The style is high-performance pure C but only with touches of C++ when needed. The files are
   .cpp not .c
+- Prefer include with <> delimiters, like #include <header.h>, leave "" as in
+  #include "header.h" only for files relative to the same folder as this
+  file. Warn me when there is an include "" specially in a library .h
 
 ### C Coding Technique
 - Use the fastest, most efficient solution known
