@@ -1,9 +1,12 @@
 # Algoritmos e Estrutura de Dados 2025
-## Informações
-- Professor [Ricardo Fabbri, Ph.D](http://rfabbri.github.io)
-- Datas das avaliações teóricas
+
+## Informações gerais
+- **Professor** [Ricardo Fabbri, Ph.D](http://rfabbri.github.io)
+- **Datas** das avaliações teóricas
     - P1: qua1Out25
     - P2: qua2Dez25
+- **Repositorio** principal da disciplina: 
+    git clone http://github.com/rfabbri/alg-fabbri-IPRJ-UERJ
 
 ## Criterio de Avaliacao
 
@@ -25,6 +28,10 @@ T = nota de trabalhos e tarefas
 
 - IA: Iremos usar o gemni-cli, mas tendo o claude-code como referencia de sistema
   production-grade em diferentes niveis durante o curso
+
+## Explicacao sobre este repositorio
+Como compilar, etc
+ver GEMINI.md
   
 ## Linguagem
 C/C++ com CMake
@@ -209,3 +216,4 @@ Serao feitas perguntas em aula
 ## See also
 - Dijkstra On the foolishness of "natural language programming" https://news.ycombinator.com/item?id=43564386 
 - [Projeto e Analise de Algoritmos - wiki](http://wiki.nosdigitais.teia.org.br/PAA) (em fase de upgrade)
+- Qualquer duvida, o prof. Fabbri se coloca à disposicao para google meet https://meet.google.com/ytc-cqrv-qjm
