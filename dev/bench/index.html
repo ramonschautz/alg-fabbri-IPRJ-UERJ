@@ -281,7 +281,7 @@
 
                 const chartData = {
                     datasets: [{
-                        label: 'Time vs. Problem Size',
+                        label: latestRun.commit.committer.username + ' - ' + benches[0].name.split('/')[0],
                         data: currentPlotData,
                         borderColor: '#3273dc',
                         backgroundColor: '#3273dc60',
