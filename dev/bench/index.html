@@ -115,7 +115,6 @@
     <script id="main-script">
       'use strict';
       // This is the original script from the benchmark action.
-      // It renders the historical charts for each benchmark case.
       (function() {
         const toolColors = {
           cargo: '#dea584', go: '#00add8', benchmarkjs: '#f1e05a', benchmarkluau: '#000080',
@@ -123,7 +122,6 @@
           jmh: '#b07219', benchmarkdotnet: '#178600', customBiggerIsBetter: '#38ff38',
           customSmallerIsBetter: '#ff3838', _: '#333333'
         };
-
         function init() {
           function collectBenchesPerTestCase(entries) {
             const map = new Map();
@@ -132,34 +130,22 @@
               for (const bench of benches) {
                 const result = { commit, date, tool, bench };
                 const arr = map.get(bench.name);
-                if (arr === undefined) {
-                  map.set(bench.name, [result]);
-                } else {
-                  arr.push(result);
-                }
+                if (arr === undefined) { map.set(bench.name, [result]); } else { arr.push(result); }
               }
             }
             return map;
           }
-
           const data = window.BENCHMARK_DATA;
           document.getElementById('last-update').textContent = new Date(data.lastUpdate).toString();
           const repoLink = document.getElementById('repository-link');
-          repoLink.href = data.repoUrl;
-          repoLink.textContent = data.repoUrl;
+          repoLink.href = data.repoUrl; repoLink.textContent = data.repoUrl;
           document.getElementById('dl-button').onclick = () => {
             const dataUrl = 'data:,' + JSON.stringify(data, null, 2);
             const a = document.createElement('a');
-            a.href = dataUrl;
-            a.download = 'benchmark_data.json';
-            a.click();
+            a.href = dataUrl; a.download = 'benchmark_data.json'; a.click();
           };
-          return Object.keys(data.entries).map(name => ({
-            name,
-            dataSet: collectBenchesPerTestCase(data.entries[name]),
-          }));
+          return Object.keys(data.entries).map(name => ({ name, dataSet: collectBenchesPerTestCase(data.entries[name]) }));
         }
-
         function renderAllChars(dataSets) {
           function renderGraph(parent, name, dataset) {
             const canvas = document.createElement('canvas');
@@ -168,106 +154,104 @@
             const color = toolColors[dataset.length > 0 ? dataset[0].tool : '_'];
             const data = {
               labels: dataset.map(d => d.commit.id.slice(0, 7)),
-              datasets: [{
-                  label: name,
-                  data: dataset.map(d => d.bench.value),
-                  borderColor: color,
-                  backgroundColor: color + '60',
-              }],
+              datasets: [{ label: name, data: dataset.map(d => d.bench.value), borderColor: color, backgroundColor: color + '60' }],
             };
             const options = {
-              scales: {
-                xAxes: [{ scaleLabel: { display: true, labelString: 'commit' } }],
-                yAxes: [{ scaleLabel: { display: true, labelString: dataset.length > 0 ? dataset[0].bench.unit : '' }, ticks: { beginAtZero: true } }],
-              },
+              scales: { xAxes: [{ scaleLabel: { display: true, labelString: 'commit' } }], yAxes: [{ scaleLabel: { display: true, labelString: dataset.length > 0 ? dataset[0].bench.unit : '' }, ticks: { beginAtZero: true } }] },
               tooltips: {
                 callbacks: {
                   afterTitle: items => '\n' + dataset[items[0].index].commit.message + '\n\n' + dataset[items[0].index].commit.timestamp + ' committed by @' + dataset[items[0].index].commit.committer.username + '\n',
-                  label: item => {
-                    let label = item.value + ' ' + dataset[item.index].bench.unit;
-                    if (dataset[item.index].bench.range) { label += ' (' + dataset[item.index].bench.range + ')'; }
-                    return label;
-                  },
+                  label: item => { let label = item.value + ' ' + dataset[item.index].bench.unit; if (dataset[item.index].bench.range) { label += ' (' + dataset[item.index].bench.range + ')'; } return label; },
                   afterLabel: item => dataset[item.index].bench.extra ? '\n' + dataset[item.index].bench.extra : ''
                 }
               },
-              onClick: (_mouseEvent, activeElems) => {
-                if (activeElems.length === 0) return;
-                window.open(dataset[activeElems[0]._index].commit.url, '_blank');
-              },
+              onClick: (_mouseEvent, activeElems) => { if (activeElems.length === 0) return; window.open(dataset[activeElems[0]._index].commit.url, '_blank'); },
             };
             new Chart(canvas, { type: 'line', data, options });
           }
-
           function renderBenchSet(name, benchSet, main) {
             const setElem = document.createElement('div');
             setElem.className = 'benchmark-set';
             main.appendChild(setElem);
             const nameElem = document.createElement('h1');
             nameElem.className = 'benchmark-title';
-            nameElem.textContent = name + ' History'; // Clarify these are history charts
+            nameElem.textContent = name + ' History';
             setElem.appendChild(nameElem);
             const graphsElem = document.createElement('div');
             graphsElem.className = 'benchmark-graphs';
             setElem.appendChild(graphsElem);
-            for (const [benchName, benches] of benchSet.entries()) {
-              renderGraph(graphsElem, benchName, benches)
-            }
+            for (const [benchName, benches] of benchSet.entries()) { renderGraph(graphsElem, benchName, benches) }
           }
-
           const main = document.getElementById('main');
-          for (const {name, dataSet} of dataSets) {
-            renderBenchSet(name, dataSet, main);
-          }
+          for (const {name, dataSet} of dataSets) { renderBenchSet(name, dataSet, main); }
         }
-
         renderAllChars(init());
       })();
     </script>
     <script id="summary-script">
       // This is the new, custom script to render the summary chart.
       document.addEventListener('DOMContentLoaded', function() {
+        console.log('[Summary] Script starting.');
         try {
-            // 1. Find the main container to prepend the new chart
             const main = document.getElementById('main');
-            if (!main) return;
+            if (!main) {
+                console.error('[Summary] Main element with id "main" not found.');
+                return;
+            }
 
-            // 2. Create the HTML structure for the summary chart
             const summaryContainer = document.createElement('div');
             summaryContainer.className = 'benchmark-set';
-            summaryContainer.innerHTML = '
-              <h1 class="benchmark-title">Time vs. Problem Size (Latest Run)</h1>
-              <div style="text-align: center; margin-bottom: 10px;">
-                  <button id="toggle-y-axis">Switch to Linear Scale</button>
-              </div>
-              <div class="benchmark-graphs">
-                  <canvas id="summary-chart" class="benchmark-chart"></canvas>
-              </div>
-            ';
-            main.prepend(summaryContainer);
 
-            // 3. Extract the data for the latest run
+            const title = document.createElement('h1');
+            title.className = 'benchmark-title';
+            title.textContent = 'Time vs. Problem Size (Latest Run)';
+
+            const buttonContainer = document.createElement('div');
+            buttonContainer.style.textAlign = 'center';
+            buttonContainer.style.marginBottom = '10px';
+
+            const toggleButton = document.createElement('button');
+            toggleButton.id = 'toggle-y-axis';
+            toggleButton.textContent = 'Switch to Linear Scale';
+
+            buttonContainer.appendChild(toggleButton);
+
+            const graphContainer = document.createElement('div');
+            graphContainer.className = 'benchmark-graphs';
+
+            const chartCanvas = document.createElement('canvas');
+            chartCanvas.id = 'summary-chart';
+            chartCanvas.className = 'benchmark-chart';
+
+            graphContainer.appendChild(chartCanvas);
+            summaryContainer.appendChild(title);
+            summaryContainer.appendChild(buttonContainer);
+            summaryContainer.appendChild(graphContainer);
+            main.prepend(summaryContainer);
+            console.log('[Summary] HTML structure created.');
+
             const data = window.BENCHMARK_DATA;
             const suite = data.entries['C++ Benchmark Results'];
-            if (!suite || suite.length === 0) return;
-            
+            if (!suite || suite.length === 0) {
+                console.log('[Summary] Benchmark data suite not found or is empty.');
+                return;
+            }
+
             const latestRun = suite[0];
             const benches = latestRun.benches;
+            console.log('[Summary] Found ' + benches.length + ' benches in the latest run.');
 
             const labels = benches.map(b => b.name.split('/').pop());
             const values = benches.map(b => b.value);
             const unit = benches.length > 0 ? benches[0].unit : '';
 
-            // 4. Chart drawing logic
-            let summaryChart = null; // To hold the chart instance
-            let isYLog = true;     // Initial state of the Y-axis is logarithmic
-
-            const chartCanvas = document.getElementById('summary-chart');
-            const toggleButton = document.getElementById('toggle-y-axis');
+            let summaryChart = null;
+            let isYLog = true;
 
             function drawSummaryChart() {
+                console.log('[Summary] Drawing chart with y-axis scale:', isYLog ? 'logarithmic' : 'linear');
                 if (summaryChart) {
-                    summaryChart.destroy(); // Destroy the old chart instance before redrawing
+                    summaryChart.destroy();
                 }
 
                 const chartOptions = {
@@ -275,13 +259,11 @@
                         xAxes: [{
                             scaleLabel: { display: true, labelString: 'Problem Size (N)' },
                             type: 'logarithmic',
-                            ticks: { 
-                                callback: (value) => Number(value.toString()) // Ensure ticks are displayed as numbers
-                            }
+                            ticks: { callback: (value) => Number(value.toString()) }
                         }],
                         yAxes: [{
                             scaleLabel: { display: true, labelString: 'Time (' + unit + ')' },
-                            type: isYLog ? 'logarithmic' : 'linear', // Set scale based on current state
+                            type: isYLog ? 'logarithmic' : 'linear',
                         }]
                     },
                     tooltips: {
@@ -308,21 +290,21 @@
                     data: chartData,
                     options: chartOptions
                 });
+                console.log('[Summary] Chart drawn.');
             }
 
-            // 5. Add event listener to the toggle button
             toggleButton.addEventListener('click', () => {
-                isYLog = !isYLog; // Flip the state
+                isYLog = !isYLog;
                 toggleButton.textContent = isYLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
-                drawSummaryChart(); // Redraw the chart with the new scale
+                drawSummaryChart();
             });
 
-            // 6. Initial drawing of the chart
             drawSummaryChart();
 
         } catch (e) {
-            console.error('Error creating summary chart:', e);
+            console.error('[Summary] An error occurred:', e);
         }
+        console.log('[Summary] Script finished.');
       });
     </script>
   </body>
