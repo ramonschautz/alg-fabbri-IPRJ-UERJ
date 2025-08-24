@@ -191,13 +191,9 @@
     <script id="summary-script">
       // This is the new, custom script to render the summary chart.
       document.addEventListener('DOMContentLoaded', function() {
-        console.log('[Summary] Script starting.');
         try {
             const main = document.getElementById('main');
-            if (!main) {
-                console.error('[Summary] Main element with id "main" not found.');
-                return;
-            }
+            if (!main) return;
 
             const summaryContainer = document.createElement('div');
             summaryContainer.className = 'benchmark-set';
@@ -228,57 +224,65 @@
             summaryContainer.appendChild(buttonContainer);
             summaryContainer.appendChild(graphContainer);
             main.prepend(summaryContainer);
-            console.log('[Summary] HTML structure created.');
 
             const data = window.BENCHMARK_DATA;
             const suite = data.entries['C++ Benchmark Results'];
-            if (!suite || suite.length === 0) {
-                console.log('[Summary] Benchmark data suite not found or is empty.');
-                return;
-            }
+            if (!suite || suite.length === 0) return;
 
             const latestRun = suite[0];
             const benches = latestRun.benches;
-            console.log('[Summary] Found ' + benches.length + ' benches in the latest run.');
-
-            const labels = benches.map(b => b.name.split('/').pop());
-            const values = benches.map(b => b.value);
             const unit = benches.length > 0 ? benches[0].unit : '';
 
+            const plotData = benches.map(b => ({
+                x: Number(b.name.split('/').pop()),
+                y: b.value
+            }));
+
             let summaryChart = null;
-            let isYLog = true;
+            let isLog = true;
 
             function drawSummaryChart() {
-                console.log('[Summary] Drawing chart with y-axis scale:', isYLog ? 'logarithmic' : 'linear');
                 if (summaryChart) {
                     summaryChart.destroy();
+                }
+
+                // Create a deep copy of the data for manipulation
+                const currentPlotData = JSON.parse(JSON.stringify(plotData));
+
+                // A logarithmic scale cannot plot a value of 0.
+                // For visualization, we map 0 to 1 (the smallest integer on a log scale) only when in log mode.
+                if (isLog && currentPlotData.length > 0 && currentPlotData[0].x === 0) {
+                    currentPlotData[0].x = 1;
                 }
 
                 const chartOptions = {
                     scales: {
                         xAxes: [{
                             scaleLabel: { display: true, labelString: 'Problem Size (N)' },
-                            type: 'logarithmic',
-                            ticks: { callback: (value) => Number(value.toString()) }
+                            type: isLog ? 'logarithmic' : 'linear',
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return Number(value.toString());
+                                }
+                            }
                         }],
                         yAxes: [{
                             scaleLabel: { display: true, labelString: 'Time (' + unit + ')' },
-                            type: isYLog ? 'logarithmic' : 'linear',
+                            type: isLog ? 'logarithmic' : 'linear',
                         }]
                     },
                     tooltips: {
                         callbacks: {
                             title: (tooltipItems) => 'Size: ' + tooltipItems[0].xLabel,
-                            label: (item) => 'Time: ' + Number(item.value).toPrecision(4) + ' ' + unit,
+                            label: (item) => 'Time: ' + Number(item.yLabel).toPrecision(4) + ' ' + unit,
                         }
                     }
                 };
 
                 const chartData = {
-                    labels: labels,
                     datasets: [{
                         label: 'Time vs. Problem Size',
-                        data: values,
+                        data: currentPlotData,
                         borderColor: '#3273dc',
                         backgroundColor: '#3273dc60',
                         fill: false,
@@ -290,12 +294,11 @@
                     data: chartData,
                     options: chartOptions
                 });
-                console.log('[Summary] Chart drawn.');
             }
 
             toggleButton.addEventListener('click', () => {
-                isYLog = !isYLog;
-                toggleButton.textContent = isYLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
+                isLog = !isLog;
+                toggleButton.textContent = isLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
                 drawSummaryChart();
             });
 
@@ -304,7 +307,6 @@
         } catch (e) {
             console.error('[Summary] An error occurred:', e);
         }
-        console.log('[Summary] Script finished.');
       });
     </script>
   </body>
