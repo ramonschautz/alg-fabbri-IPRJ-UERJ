@@ -231,11 +231,11 @@
 
             const latestRun = suite[0];
             const benches = latestRun.benches;
-            const unit = benches.length > 0 ? benches[0].unit : '';
+            const unit = benches.length > 0 ? 'us/iteration' : '';  // microseconds
 
             const plotData = benches.map(b => ({
                 x: Number(b.name.split('/').pop()),
-                y: b.value
+                y: b.value / 1000  // microseconds
             }));
 
             let summaryChart = null;
