@@ -22,6 +22,10 @@ one and the aggregator of all the other ones through git submodules
 
 ## Configuring and compiling
 
+### After cloning
+
+git submodule update --init --recursive
+
 ### Building (Human workflow)
 
 ```

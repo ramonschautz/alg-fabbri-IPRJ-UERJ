@@ -17,4 +17,7 @@
 ### Evaluation / scoring
 - Eval each item in of Tarefa 2
 
+## Linked list exercise 30min
+- May use AI
+
 # UNDER CONSTRUCTION -----------------------------------------------------------

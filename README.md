@@ -139,7 +139,7 @@ Lista de exercicios (explicada em aula)
 Na aula prática você tera 30 min para programar um algoritmo similar solicitado
 pelo professor.
 
-### Tarefa 2 para qui29ago25
+### Tarefa 2 para sex29ago25
 **ATENCAO:** Tarefa 2 ainda sendo atualizada
 
 #### Mini-tarefa: ler sobre git
@@ -197,7 +197,7 @@ pelo professor, onde a lista encadeada pode armazenar um tipo de dado mais
 complexo que int. Realize treinos programando exercicio de livros ou internet
 sobre lista encadeada. *Pode usar IA nesta avaliacao especificamente.*
 
-### Tarefa 3 para qui29ago25 + 7
+### Tarefa 3 para sex29ago25 + 7
 **ATENCAO:** Tarefa 3 ainda sendo atualizada
 
 #### Mini-tarefa: ler sobre git branching
