@@ -2,6 +2,7 @@
 #include "linked_list_string.h"
 #include <cstdlib>
 #include <iostream>
+#include <string.h>
 
 #define MAX_NUMERO_DE_CARACTERES 64
 struct No {
