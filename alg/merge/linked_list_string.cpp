@@ -1,8 +1,8 @@
 /* R. Fabbri, 2024 */
 #include "linked_list_string.h"
 #include <cstdlib>
+#include <cstring>
 #include <iostream>
-#include <string.h>
 
 #define MAX_NUMERO_DE_CARACTERES 64
 struct No {
