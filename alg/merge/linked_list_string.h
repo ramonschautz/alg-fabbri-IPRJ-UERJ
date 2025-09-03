@@ -5,4 +5,4 @@
 void playground_lista();
 void playground_lista2();
 
-#endif /* LINKED_LIST_STRING_H */
+#endif
