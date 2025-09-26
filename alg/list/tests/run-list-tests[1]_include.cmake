@@ -1,0 +1,5 @@
+if(EXISTS "/home/ramon/ramon/alg-fabbri-IPRJ-UERJ/alg/list/tests/run-list-tests[1]_tests.cmake")
+  include("/home/ramon/ramon/alg-fabbri-IPRJ-UERJ/alg/list/tests/run-list-tests[1]_tests.cmake")
+else()
+  add_test(run-list-tests_NOT_BUILT run-list-tests_NOT_BUILT)
+endif()
